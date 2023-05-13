@@ -1,0 +1,12 @@
+{
+    "type": "boolean",
+    "getable": true,
+    "setable": true,
+    "title": {
+        "en": "Pause",
+        "fr": "Pause",
+        "nl": "Pauzeren"
+    },
+    "insights": false,
+    "icon": "/assets/Pause.svg"
+}

@@ -1,0 +1,12 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Mop accessory",
+    "fr": "Serpillière",
+    "nl": "Dweilmodule"
+  },
+  "uiComponent": "sensor",
+  "getable": true,
+  "insights": false,
+  "icon": "/assets/mop-svgrepo-com.svg"
+}

@@ -1,0 +1,13 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Current Zone",
+    "fr": "Zone actuelle",
+    "nl": "Huidige kamer"
+  },
+  "uiComponent": "sensor",
+  "getable": true,
+  "setable": true,
+  "insights": false,
+  "icon": "/assets/location-svgrepo-com.svg"
+}

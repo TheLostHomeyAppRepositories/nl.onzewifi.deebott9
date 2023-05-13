@@ -1,0 +1,434 @@
+{
+    "actions": [
+        {
+            "id": "AutoClean",
+            "title": {
+                "en": "Start AutoCleaning",
+                "fr": "Départ nettoyage automatique",
+                "nl": "Start automatisch schoonmaken"
+            },
+            "titleFormatted": {
+                "en": "Start cleaning all rooms",
+                "fr": "Démarre le nettoyage de toutes les pièces",
+                "nl": "Start met schonmaken van alle kamers"
+            },
+            "platforms": [
+                "local",
+                "cloud"
+            ]
+        },
+        {
+            "id": "GotoParkPosition",
+            "title": {
+                "en": "Go to park position",
+                "fr": "Aller au parking",
+                "nl": "Ga naar de parkeerplaats"
+            },
+            "titleFormatted": {
+                "en": "Park the Deebot at the saved parking spot",
+                "fr": "Garez le Deebot dans la place de stationnement pré-enregistrée",
+                "nl": "Parkeer de Deebot op de vooraf opgeslagen parkeerplaats"
+            },
+            "platforms": [
+                "local",
+                "cloud"
+            ]
+        },
+        {
+            "id": "SpotArea",
+            "title": {
+                "en": "Clean a zone ...",
+                "fr": "Nettoyage de la pièce ...",
+                "nl": "Maak één kamer schoon"
+            },
+            "titleFormatted": {
+                "en": "Clean a single zone: [[zone]]",
+                "fr": "Nettoyer une seule zone: [[zone]]",
+                "nl": "Maak een enkele kamer schoon: [[zone]]"
+            },
+            "platforms": [
+                "local",
+                "cloud"
+            ],
+            "args": [
+                {
+                    "type": "autocomplete",
+                    "name": "zone",
+                    "required": true,
+                    "title": {
+                        "en": "Zone",
+                        "fr": "Pièce",
+                        "nl": "Kamer"
+                    },
+                    "placeholder": {
+                        "en": "kitchen",
+                        "fr": "cuisine",
+                        "nl": "keuken"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "SpotAreas",
+            "title": {
+                "en": "Clean zones ...",
+                "fr": "Nettoie les pièces ...",
+                "nl": "Maak meerdere kamers schoon"
+            },
+            "titleFormatted": {
+                "en": "Clean [[zones]]",
+                "fr": "Nettoie [[zones]]",
+                "nl": "Maak [[zones]] schoon"
+            },
+            "platforms": [
+                "local",
+                "cloud"
+            ],
+            "args": [
+                {
+                    "type": "text",
+                    "name": "zones",
+                    "required": true,
+                    "title": {
+                        "en": "Zones",
+                        "fr": "Pièces",
+                        "nl": "Kamers"
+                    },
+                    "placeholder": {
+                        "en": "kitchen",
+                        "fr": "cuisine",
+                        "nl": "keuken"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "PauseCleaning",
+            "title": {
+                "en": "Pause Cleaning",
+                "fr": "Suspend le nettoyage",
+                "nl": "Pauzeer"
+            },
+            "titleFormatted": {
+                "en": "Temporary pause cleaning",
+                "fr": "Suspend temporairement le nettoyage",
+                "nl": "Pauzeer het schoonmaken"
+            },
+            "platforms": [
+                "local",
+                "cloud"
+            ]
+        },
+        {
+            "id": "ResumeCleaning",
+            "title": {
+                "en": "Resume Cleaning",
+                "fr": "Reprend le nettoyage",
+                "nl": "Ga verder"
+            },
+            "titleFormatted": {
+                "en": "Resume cleaning when paused",
+                "fr": "Reprend le nettoyage après mise en pause",
+                "nl": "Hervat het schoonmaken"
+            },
+            "platforms": [
+                "local",
+                "cloud"
+            ]
+        },
+        {
+            "id": "ReturnDock",
+            "title": {
+                "en": "Return to dock",
+                "fr": "Retour à la station",
+                "nl": "Keer terug naar dock"
+            },
+            "titleFormatted": {
+                "en": "Return to charging/autoempty dock",
+                "fr": "Retour à la station de charge",
+                "nl": "Keer terug naar het docking/oplaadstation"
+            }
+        },
+        {
+            "id": "EmptyDustBin",
+            "title": {
+                "en": "Empty the dustbin",
+                "fr": "Vide la poussière",
+                "nl": "Leeg de stofbak"
+            },
+            "titleFormatted": {
+                "en": "Empty the dustbin",
+                "fr": "Vide la poussière",
+                "nl": "Leeg de stof opvangbak"
+            },
+            "platforms": [
+                "local",
+                "cloud"
+            ]
+        },
+        {
+            "id": "RawCommand",
+            "title": {
+                "en": "Run a raw vacbot command",
+                "fr": "Exécuter une commande",
+                "nl": "Voer een commando uit"
+            },
+            "titleFormatted": {
+                "en": "Start a vacbot.run([[command]]) command",
+                "fr": "Exécuter une vacbot.run([[command]]) commande",
+                "nl": "Voer een vacbot.run([[command]]) commando uit"
+
+            },
+            "platforms": [
+                "local",
+                "cloud"
+            ],
+            "args": [
+                {
+                    "type": "text",
+                    "name": "command",
+                    "required": true,
+                    "title": {
+                        "en": "Command",
+                        "fr": "Commande",
+                        "nl": "Commando"
+                    },
+                    "placeholder": {
+                        "en": "Relocate",
+                        "fr": "Relocate",
+                        "nl": "Relocate"
+                    }
+                }
+            ]
+        }
+    ],
+    "triggers": [
+        {
+            "id": "ChargeState",
+            "title": {
+                "en": "Current chargestate changed",
+                "fr": "L'état de charge a changé",
+                "nl": "Huidige oplaadstatus is veranderd"
+            },
+            "platforms": [
+                "local",
+                "cloud"
+            ],
+            "tokens": [
+                {
+                    "name": "state",
+                    "type": "string",
+                    "title": {
+                        "en": "Current charging state",
+                        "fr": "Etat de charge",
+                        "nl": "Laadstatus"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "Operation",
+            "title": {
+                "en": "Current operation changed",
+                "fr": "L'activité en cours a changé",
+                "nl": "Huidige opdracht is gewijzigd"
+            },
+            "platforms": [
+                "local",
+                "cloud"
+            ],
+            "tokens": [
+                {
+                    "name": "operation",
+                    "type": "string",
+                    "title": {
+                        "en": "Current Operation",
+                        "fr": "Activité en cours",
+                        "nl": "Huidige actie"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "LocationReport",
+            "title": {
+                "en": "Current location changed",
+                "fr": "Changement de pièce",
+                "nl": "Huidige locatie is gewijzigd" 
+            },
+            "platforms": [
+                "local",
+                "cloud"
+            ],
+            "tokens": [
+                {
+                    "name": "zone",
+                    "type": "string",
+                    "title": {
+                        "en": "Current Zone",
+                        "fr": "Pièce actuelle",
+                        "nl": "Huidige kamer"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "ErrorReport",
+            "title": {
+                "en": "An error occurred",
+                "fr": "Une erreur s'est produite",
+                "nl": "Er is een foutmelding ontvangen" 
+            },
+            "platforms": [
+                "local",
+                "cloud"
+            ],
+            "tokens": [
+                {
+                    "name": "error",
+                    "type": "string",
+                    "title": {
+                        "en": "Last error",
+                        "fr": "Dernière erreur",
+                        "nl": "Laatste foutmelding"
+                    }
+                },
+                {
+                    "name": "errorcode",
+                    "type": "number",
+                    "title": {
+                        "en": "Last error code",
+                        "fr": "Dernière code erreur",
+                        "nl": "Laatste foutcode"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "CleanReport",
+            "title": {
+                "en": "New CleanReport",
+                "fr": "Nouveau rapport de nettoyage",
+                "nl": "Nieuw schoonmaakrapport"
+            },
+            "platforms": [
+                "local",
+                "cloud"
+            ],
+            "tokens": [
+                {
+                    "name": "image",
+                    "type": "image",
+                    "title": {
+                        "en": "Latest CleanLog image",
+                        "fr": "Image du dernier rapport de nettoyage",
+                        "nl": "Nieuwste schoonmaakvisualisatie"
+                    }
+                },
+                {
+                    "name": "date",
+                    "type": "string",
+                    "title": {
+                        "en": "Time of completion",
+                        "fr": "Heure de fin",
+                        "nl": "Eindtijd"
+                    }
+                },
+                {
+                    "name": "stopReason",
+                    "type": "string",
+                    "title": {
+                        "en": "Reason for stopping",
+                        "fr": "Raison de fin de nettoyage",
+                        "nl": "Reden van het beëindigen"
+                    }
+                },
+                {
+                    "name": "type",
+                    "type": "string",
+                    "title": {
+                        "en": "Type of cleaning",
+                        "fr": "Type de nettoyage",
+                        "nl": "Soort schoonmaakactie"
+                    }
+                },
+                {
+                    "name": "mopped",
+                    "type": "boolean",
+                    "title": {
+                        "en": "Mop installed",
+                        "fr": "Serpillière installée",
+                        "nl": "Dweilmodule aangesloten" 
+                    }
+                }
+            ]
+        }
+    ],
+    "conditions": [
+        {
+            "id": "MoppingModule",
+            "title": {
+                "en": "Mopping module !{{is|isn't}} attached",
+                "fr": "Serpillière installée",
+                "nl": "Dweilmodule is !{{wel|niet}} aangesloten"
+            },
+            "hint": {
+                "en": "Check if the mopping modules is attached",
+                "fr": "Vérifiez si le module serpillière est installé",
+                "nl": "Controle of de dweilmodule is aangesloten"
+            }
+        },
+        {
+            "id": "AutoEmptyState",
+            "title": {
+                "en": "Auto empty is !{{enabled|disabled}}",
+                "fr": "Vidage automatique !{{activé|désactivé}}",
+                "nl": "Automatisch legen is !{{in|uit}}geschakeld"
+            },
+            "hint": {
+                "en": "Check if the auto emptying of the dustbin is or isn't enable",
+                "fr": "Verifiez si le vidage automatique de la poussière est activé",
+                "nl": "Controle of het automatisch leven van de stofbak is ingeschakeld"
+            }
+        },
+        {
+            "id": "CurrentMap",
+            "title": {
+                "en": "Current map !{{is|isn't}} ",
+                "fr": "La carte actuelle !{{est|n'est pas}} ",
+                "nl": "Huidige kaart is !{{wel|niet}} "
+            },
+            "titleFormatted": {
+                "en": "Check if [[mapname]] !{{is|isn't}} the current map",
+                "fr": "Vérifiez si [[mapname]] !{{est|n'est pas}} l'actuelle",
+                "nl": "Controle of [[mapname]] !{{wel|niet}} de huidige kaart is"
+            },
+            "hint": {
+                "en": "Check if a certain map is the current map",
+                "fr": "Vérifie si une carte est en cours d'utilisation",
+                "nl": "Controle of een kaart de huidige kaart is"
+            },
+            "platforms": [
+                "local",
+                "cloud"
+            ],
+            "args": [
+                {
+                    "type": "autocomplete",
+                    "name": "mapname",
+                    "required": true,
+                    "title": {
+                        "en": "Current map",
+                        "fr": "Carte actuelle",
+                        "nl": "Huidige kaart"
+                    },
+                    "placeholder": {
+                        "en": "Downstairs",
+                        "fr": "Rez-de-chaussée",
+                        "nl": "Beneden"
+                    }
+                }
+            ]
+        }
+    ]
+}

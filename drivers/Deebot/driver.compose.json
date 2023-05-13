@@ -1,0 +1,80 @@
+{
+    "name": {
+        "en": "Deebot",
+        "fr": "Deebot"
+    },
+    "class": "vacuumcleaner",
+    "capabilities": [
+        "measure_battery",
+        "alarm_tamper",
+        "Charge",
+        "Operation",
+        "CurrentZone",
+        "MopStatus",
+        "VacuumPower",
+        "WaterFlowLevel",
+        "AutoClean",
+        "PauseCleaning",
+        "ReturnDock",
+        "GotoParkPosition",
+        "CleanCount",
+        "ScrubbingType",
+        "AutoEmpty",
+        "AromaMode",
+        "SetParkPosition"
+    ],
+    "platforms": [
+        "local",
+        "cloud"
+    ],
+    "connectivity": [
+        "cloud"
+    ],
+    "pair": [
+        {
+            "id": "login_credentials",
+            "template": "login_credentials",
+            "options": {
+                "usernameLabel": {
+                    "en": "Ecovacs account"
+                },
+                "usernamePlaceholder": {
+                    "en": "john@doe.com"
+                },
+                "passwordLabel": {
+                    "en": "Password"
+                },
+                "passwordPlaceholder": {
+                    "en": "Password"
+                }
+            }
+        },
+        {
+            "id": "list_devices",
+            "template": "list_devices",
+            "navigation": {
+                "next": "add_devices"
+            }
+        },
+        {
+            "id": "add_devices",
+            "template": "add_devices"
+        }
+    ],
+    "repair": [
+        {
+            "id": "add_devices",
+            "template": "add_devices"
+        }
+    ],
+    "energy": {
+        "batteries": [
+            "INTERNAL"
+        ]
+    },
+    "images": {
+        "xlarge": "/drivers/Deebot/assets/images/XLarge.png",
+        "large": "/drivers/Deebot/assets/images/Large.png",
+        "small": "/drivers/Deebot/assets/images/Small.png"
+    }
+}

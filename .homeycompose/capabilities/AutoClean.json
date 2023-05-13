@@ -1,0 +1,12 @@
+{
+    "type": "boolean",
+    "getable": true,
+    "setable": true,
+    "title": {
+        "en": "Auto Clean",
+        "fr": "Nettoyage automatique",
+        "nl": "Automatisch schoonmaken"
+    },
+    "insights": false,
+    "icon": "/assets/AutoClean.svg"
+}

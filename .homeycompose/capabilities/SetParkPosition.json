@@ -1,0 +1,12 @@
+{
+    "type": "boolean",
+    "getable": true,
+    "setable": true,
+    "title": {
+        "fr": "Enregistrer parking",
+        "en": "Save parking spot",
+        "nl": "Bewaar parkeerplaats"
+    },
+    "insights": false,
+    "icon": "/assets/SetParkPosition.svg"
+}

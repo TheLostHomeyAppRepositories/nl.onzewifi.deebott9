@@ -1,0 +1,12 @@
+{
+    "type": "boolean",
+    "getable": true,
+    "setable": true,
+    "title": {
+        "en": "Double run",
+        "fr": "Double passage",
+        "nl": "2 maal schoonmaken"
+    },
+    "insights": false,
+    "icon": "/assets/CleanCount.svg"
+}

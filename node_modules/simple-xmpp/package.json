@@ -1,0 +1,39 @@
+{
+    "name": "simple-xmpp",
+    "version": "2.3.1",
+    "directories": {
+        "lib": "./lib"
+    },
+    "main": "./lib/simple-xmpp",
+    "description": "Simple High Level NodeJS XMPP Library",
+    "author": "Arunoda Susiripala <arunoda.susiripala@gmail.com>",
+    "homepage": "https://github.com/arunoda/node-simple-xmpp",
+    "licenses": [
+        {
+            "type": "The MIT License",
+            "url": "http://www.opensource.org/licenses/mit-license.php"
+        }
+    ],
+    "contributors": [
+        {
+            "name": "Nick Jennings",
+            "email": "nick@silverbucket.net"
+        },
+        {
+            "name": "Julien Breux",
+            "email": "julien.breux@gmail.com"
+        }
+    ],
+    "dependencies": {
+        "node-xmpp-client": "^3.0.0",
+        "qbox": "0.1.x"
+    },
+    "devDependencies": {
+        "horaa": "^0.1.2-alpha",
+        "nodemock": ">= 0.2.13"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:arunoda/node-simple-xmpp.git"
+    }
+}

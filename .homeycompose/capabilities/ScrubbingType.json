@@ -1,0 +1,12 @@
+{
+    "type": "boolean",
+    "getable": true,
+    "setable": true,
+    "title": {
+        "en": "Deep Mopping",
+        "fr": "Serpillère renforcée",
+        "nl": "Intensief dweilen"
+    },
+    "insights": false,
+    "icon": "/assets/mop-svgrepo-com.svg"
+}

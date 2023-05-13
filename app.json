@@ -1,0 +1,1018 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "nl.onzewifi.deebott9",
+  "version": "1.4.8",
+  "compatibility": ">=8.1.1",
+  "sdk": 3,
+  "name": {
+    "en": "< Ecovacs Deebot >"
+  },
+  "brandColor": "#4520DF",
+  "description": {
+    "en": "Connect and control your Ecovacs Deebot",
+    "nl": "Verbind je Ecovacs Deebot 950type (met dweil functie)",
+    "fr": "Connectez votre Ecovacs Deebot type 950 (avec serpillière)"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Sascha (mrbungle64)"
+      },
+      {
+        "name": "Olivier Messiant"
+      }
+    ],
+    "translators": [
+      {
+        "name": "Olivier Messiant"
+      }
+    ]
+  },
+  "category": [
+    "appliances"
+  ],
+  "permissions": [],
+  "platforms": [
+    "local",
+    "cloud"
+  ],
+  "images": {
+    "small": "/assets/images/DeebotT9-Small.png",
+    "large": "/assets/images/DeebotT9-Large.png",
+    "xlarge": "/assets/images/DeebotT9-Extra-Large.png"
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "paypallrvdijk"
+      }
+    }
+  },
+  "author": {
+    "name": "Ricardo van Dijk",
+    "email": "rvdijk@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/cactusss/nl.onzewifi.DeebotT9/issues"
+  },
+  "api": {
+    "getLogs": {
+      "method": "get",
+      "path": "/getlogs"
+    },
+    "deleteLogs": {
+      "method": "get",
+      "path": "/deletelogs"
+    }
+  },
+  "tags": {
+    "en": [
+      "Deebot",
+      "mopping",
+      "clean report",
+      "ecovacs multimap"
+    ],
+    "nl": [
+      "Deebot",
+      "dweilen",
+      "multimap",
+      "ecovacs",
+      "afbeelding"
+    ]
+  },
+  "source": "https://github.com/cactusss/nl.onzewifi.DeebotT9",
+  "homeyCommunityTopicId": 75237,
+  "flow": {
+    "triggers": [
+      {
+        "id": "ChargeState",
+        "title": {
+          "en": "Current chargestate changed",
+          "fr": "L'état de charge a changé",
+          "nl": "Huidige oplaadstatus is veranderd"
+        },
+        "platforms": [
+          "local",
+          "cloud"
+        ],
+        "tokens": [
+          {
+            "name": "state",
+            "type": "string",
+            "title": {
+              "en": "Current charging state",
+              "fr": "Etat de charge",
+              "nl": "Laadstatus"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=Deebot"
+          }
+        ]
+      },
+      {
+        "id": "Operation",
+        "title": {
+          "en": "Current operation changed",
+          "fr": "L'activité en cours a changé",
+          "nl": "Huidige opdracht is gewijzigd"
+        },
+        "platforms": [
+          "local",
+          "cloud"
+        ],
+        "tokens": [
+          {
+            "name": "operation",
+            "type": "string",
+            "title": {
+              "en": "Current Operation",
+              "fr": "Activité en cours",
+              "nl": "Huidige actie"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=Deebot"
+          }
+        ]
+      },
+      {
+        "id": "LocationReport",
+        "title": {
+          "en": "Current location changed",
+          "fr": "Changement de pièce",
+          "nl": "Huidige locatie is gewijzigd"
+        },
+        "platforms": [
+          "local",
+          "cloud"
+        ],
+        "tokens": [
+          {
+            "name": "zone",
+            "type": "string",
+            "title": {
+              "en": "Current Zone",
+              "fr": "Pièce actuelle",
+              "nl": "Huidige kamer"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=Deebot"
+          }
+        ]
+      },
+      {
+        "id": "ErrorReport",
+        "title": {
+          "en": "An error occurred",
+          "fr": "Une erreur s'est produite",
+          "nl": "Er is een foutmelding ontvangen"
+        },
+        "platforms": [
+          "local",
+          "cloud"
+        ],
+        "tokens": [
+          {
+            "name": "error",
+            "type": "string",
+            "title": {
+              "en": "Last error",
+              "fr": "Dernière erreur",
+              "nl": "Laatste foutmelding"
+            }
+          },
+          {
+            "name": "errorcode",
+            "type": "number",
+            "title": {
+              "en": "Last error code",
+              "fr": "Dernière code erreur",
+              "nl": "Laatste foutcode"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=Deebot"
+          }
+        ]
+      },
+      {
+        "id": "CleanReport",
+        "title": {
+          "en": "New CleanReport",
+          "fr": "Nouveau rapport de nettoyage",
+          "nl": "Nieuw schoonmaakrapport"
+        },
+        "platforms": [
+          "local",
+          "cloud"
+        ],
+        "tokens": [
+          {
+            "name": "image",
+            "type": "image",
+            "title": {
+              "en": "Latest CleanLog image",
+              "fr": "Image du dernier rapport de nettoyage",
+              "nl": "Nieuwste schoonmaakvisualisatie"
+            }
+          },
+          {
+            "name": "date",
+            "type": "string",
+            "title": {
+              "en": "Time of completion",
+              "fr": "Heure de fin",
+              "nl": "Eindtijd"
+            }
+          },
+          {
+            "name": "stopReason",
+            "type": "string",
+            "title": {
+              "en": "Reason for stopping",
+              "fr": "Raison de fin de nettoyage",
+              "nl": "Reden van het beëindigen"
+            }
+          },
+          {
+            "name": "type",
+            "type": "string",
+            "title": {
+              "en": "Type of cleaning",
+              "fr": "Type de nettoyage",
+              "nl": "Soort schoonmaakactie"
+            }
+          },
+          {
+            "name": "mopped",
+            "type": "boolean",
+            "title": {
+              "en": "Mop installed",
+              "fr": "Serpillière installée",
+              "nl": "Dweilmodule aangesloten"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=Deebot"
+          }
+        ]
+      }
+    ],
+    "conditions": [
+      {
+        "id": "MoppingModule",
+        "title": {
+          "en": "Mopping module !{{is|isn't}} attached",
+          "fr": "Serpillière installée",
+          "nl": "Dweilmodule is !{{wel|niet}} aangesloten"
+        },
+        "hint": {
+          "en": "Check if the mopping modules is attached",
+          "fr": "Vérifiez si le module serpillière est installé",
+          "nl": "Controle of de dweilmodule is aangesloten"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=Deebot"
+          }
+        ]
+      },
+      {
+        "id": "AutoEmptyState",
+        "title": {
+          "en": "Auto empty is !{{enabled|disabled}}",
+          "fr": "Vidage automatique !{{activé|désactivé}}",
+          "nl": "Automatisch legen is !{{in|uit}}geschakeld"
+        },
+        "hint": {
+          "en": "Check if the auto emptying of the dustbin is or isn't enable",
+          "fr": "Verifiez si le vidage automatique de la poussière est activé",
+          "nl": "Controle of het automatisch leven van de stofbak is ingeschakeld"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=Deebot"
+          }
+        ]
+      },
+      {
+        "id": "CurrentMap",
+        "title": {
+          "en": "Current map !{{is|isn't}} ",
+          "fr": "La carte actuelle !{{est|n'est pas}} ",
+          "nl": "Huidige kaart is !{{wel|niet}} "
+        },
+        "titleFormatted": {
+          "en": "Check if [[mapname]] !{{is|isn't}} the current map",
+          "fr": "Vérifiez si [[mapname]] !{{est|n'est pas}} l'actuelle",
+          "nl": "Controle of [[mapname]] !{{wel|niet}} de huidige kaart is"
+        },
+        "hint": {
+          "en": "Check if a certain map is the current map",
+          "fr": "Vérifie si une carte est en cours d'utilisation",
+          "nl": "Controle of een kaart de huidige kaart is"
+        },
+        "platforms": [
+          "local",
+          "cloud"
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=Deebot"
+          },
+          {
+            "type": "autocomplete",
+            "name": "mapname",
+            "required": true,
+            "title": {
+              "en": "Current map",
+              "fr": "Carte actuelle",
+              "nl": "Huidige kaart"
+            },
+            "placeholder": {
+              "en": "Downstairs",
+              "fr": "Rez-de-chaussée",
+              "nl": "Beneden"
+            }
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "AutoClean",
+        "title": {
+          "en": "Start AutoCleaning",
+          "fr": "Départ nettoyage automatique",
+          "nl": "Start automatisch schoonmaken"
+        },
+        "titleFormatted": {
+          "en": "Start cleaning all rooms",
+          "fr": "Démarre le nettoyage de toutes les pièces",
+          "nl": "Start met schonmaken van alle kamers"
+        },
+        "platforms": [
+          "local",
+          "cloud"
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=Deebot"
+          }
+        ]
+      },
+      {
+        "id": "GotoParkPosition",
+        "title": {
+          "en": "Go to park position",
+          "fr": "Aller au parking",
+          "nl": "Ga naar de parkeerplaats"
+        },
+        "titleFormatted": {
+          "en": "Park the Deebot at the saved parking spot",
+          "fr": "Garez le Deebot dans la place de stationnement pré-enregistrée",
+          "nl": "Parkeer de Deebot op de vooraf opgeslagen parkeerplaats"
+        },
+        "platforms": [
+          "local",
+          "cloud"
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=Deebot"
+          }
+        ]
+      },
+      {
+        "id": "SpotArea",
+        "title": {
+          "en": "Clean a zone ...",
+          "fr": "Nettoyage de la pièce ...",
+          "nl": "Maak één kamer schoon"
+        },
+        "titleFormatted": {
+          "en": "Clean a single zone: [[zone]]",
+          "fr": "Nettoyer une seule zone: [[zone]]",
+          "nl": "Maak een enkele kamer schoon: [[zone]]"
+        },
+        "platforms": [
+          "local",
+          "cloud"
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=Deebot"
+          },
+          {
+            "type": "autocomplete",
+            "name": "zone",
+            "required": true,
+            "title": {
+              "en": "Zone",
+              "fr": "Pièce",
+              "nl": "Kamer"
+            },
+            "placeholder": {
+              "en": "kitchen",
+              "fr": "cuisine",
+              "nl": "keuken"
+            }
+          }
+        ]
+      },
+      {
+        "id": "SpotAreas",
+        "title": {
+          "en": "Clean zones ...",
+          "fr": "Nettoie les pièces ...",
+          "nl": "Maak meerdere kamers schoon"
+        },
+        "titleFormatted": {
+          "en": "Clean [[zones]]",
+          "fr": "Nettoie [[zones]]",
+          "nl": "Maak [[zones]] schoon"
+        },
+        "platforms": [
+          "local",
+          "cloud"
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=Deebot"
+          },
+          {
+            "type": "text",
+            "name": "zones",
+            "required": true,
+            "title": {
+              "en": "Zones",
+              "fr": "Pièces",
+              "nl": "Kamers"
+            },
+            "placeholder": {
+              "en": "kitchen",
+              "fr": "cuisine",
+              "nl": "keuken"
+            }
+          }
+        ]
+      },
+      {
+        "id": "PauseCleaning",
+        "title": {
+          "en": "Pause Cleaning",
+          "fr": "Suspend le nettoyage",
+          "nl": "Pauzeer"
+        },
+        "titleFormatted": {
+          "en": "Temporary pause cleaning",
+          "fr": "Suspend temporairement le nettoyage",
+          "nl": "Pauzeer het schoonmaken"
+        },
+        "platforms": [
+          "local",
+          "cloud"
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=Deebot"
+          }
+        ]
+      },
+      {
+        "id": "ResumeCleaning",
+        "title": {
+          "en": "Resume Cleaning",
+          "fr": "Reprend le nettoyage",
+          "nl": "Ga verder"
+        },
+        "titleFormatted": {
+          "en": "Resume cleaning when paused",
+          "fr": "Reprend le nettoyage après mise en pause",
+          "nl": "Hervat het schoonmaken"
+        },
+        "platforms": [
+          "local",
+          "cloud"
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=Deebot"
+          }
+        ]
+      },
+      {
+        "id": "ReturnDock",
+        "title": {
+          "en": "Return to dock",
+          "fr": "Retour à la station",
+          "nl": "Keer terug naar dock"
+        },
+        "titleFormatted": {
+          "en": "Return to charging/autoempty dock",
+          "fr": "Retour à la station de charge",
+          "nl": "Keer terug naar het docking/oplaadstation"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=Deebot"
+          }
+        ]
+      },
+      {
+        "id": "EmptyDustBin",
+        "title": {
+          "en": "Empty the dustbin",
+          "fr": "Vide la poussière",
+          "nl": "Leeg de stofbak"
+        },
+        "titleFormatted": {
+          "en": "Empty the dustbin",
+          "fr": "Vide la poussière",
+          "nl": "Leeg de stof opvangbak"
+        },
+        "platforms": [
+          "local",
+          "cloud"
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=Deebot"
+          }
+        ]
+      },
+      {
+        "id": "RawCommand",
+        "title": {
+          "en": "Run a raw vacbot command",
+          "fr": "Exécuter une commande",
+          "nl": "Voer een commando uit"
+        },
+        "titleFormatted": {
+          "en": "Start a vacbot.run([[command]]) command",
+          "fr": "Exécuter une vacbot.run([[command]]) commande",
+          "nl": "Voer een vacbot.run([[command]]) commando uit"
+        },
+        "platforms": [
+          "local",
+          "cloud"
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=Deebot"
+          },
+          {
+            "type": "text",
+            "name": "command",
+            "required": true,
+            "title": {
+              "en": "Command",
+              "fr": "Commande",
+              "nl": "Commando"
+            },
+            "placeholder": {
+              "en": "Relocate",
+              "fr": "Relocate",
+              "nl": "Relocate"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "name": {
+        "en": "Deebot",
+        "fr": "Deebot"
+      },
+      "class": "vacuumcleaner",
+      "capabilities": [
+        "measure_battery",
+        "alarm_tamper",
+        "Charge",
+        "Operation",
+        "CurrentZone",
+        "MopStatus",
+        "VacuumPower",
+        "WaterFlowLevel",
+        "AutoClean",
+        "PauseCleaning",
+        "ReturnDock",
+        "GotoParkPosition",
+        "CleanCount",
+        "ScrubbingType",
+        "AutoEmpty",
+        "AromaMode",
+        "SetParkPosition"
+      ],
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "cloud"
+      ],
+      "pair": [
+        {
+          "id": "login_credentials",
+          "template": "login_credentials",
+          "options": {
+            "usernameLabel": {
+              "en": "Ecovacs account"
+            },
+            "usernamePlaceholder": {
+              "en": "john@doe.com"
+            },
+            "passwordLabel": {
+              "en": "Password"
+            },
+            "passwordPlaceholder": {
+              "en": "Password"
+            }
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "repair": [
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "energy": {
+        "batteries": [
+          "INTERNAL"
+        ]
+      },
+      "images": {
+        "xlarge": "/drivers/Deebot/assets/images/XLarge.png",
+        "large": "/drivers/Deebot/assets/images/Large.png",
+        "small": "/drivers/Deebot/assets/images/Small.png"
+      },
+      "id": "Deebot",
+      "settings": [
+        {
+          "id": "username",
+          "type": "text",
+          "label": {
+            "en": "Ecovacs Username",
+            "fr": "Compte Ecovacs"
+          },
+          "value": "John Doe",
+          "hint": {
+            "en": "The name of the user in the Ecovacs app.",
+            "fr": "Le nom de compte dans l'app Ecovacs"
+          }
+        },
+        {
+          "id": "password",
+          "type": "password",
+          "label": {
+            "en": "Password",
+            "fr": "Mot de passe"
+          },
+          "value": "Secret"
+        }
+      ]
+    }
+  ],
+  "capabilities": {
+    "alarm_tamper": {
+      "type": "boolean",
+      "title": {
+        "en": "Generic warning",
+        "nl": "Algemene waarschuwing",
+        "fr": "Alarme générique"
+      },
+      "icon": "/assets/alert.svg",
+      "desc": {
+        "en": "Generic warning",
+        "nl": "Algemene waarschuwing",
+        "fr": "Alarme générique"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "AromaMode": {
+      "type": "boolean",
+      "getable": true,
+      "uiComponent": "sensor",
+      "title": {
+        "en": "Freshen air while cleaning",
+        "fr": "Désodorise pendant le nettoyage",
+        "nl": "Luchtverfrisser tijden het schoonmake"
+      },
+      "insights": false,
+      "icon": "/assets/AromaMode.svg"
+    },
+    "AutoClean": {
+      "type": "boolean",
+      "getable": true,
+      "setable": true,
+      "title": {
+        "en": "Auto Clean",
+        "fr": "Nettoyage automatique",
+        "nl": "Automatisch schoonmaken"
+      },
+      "insights": false,
+      "icon": "/assets/AutoClean.svg"
+    },
+    "AutoEmpty": {
+      "type": "boolean",
+      "getable": true,
+      "setable": true,
+      "title": {
+        "en": "Enable auto empty",
+        "fr": "Vidange auto",
+        "nl": "Automatisch legen inschakelen"
+      },
+      "insights": false,
+      "icon": "/assets/AutoEmpty.svg"
+    },
+    "Charge": {
+      "type": "string",
+      "title": {
+        "en": "Charge status",
+        "fr": "Etat de charge",
+        "nl": "Oplaadstatus"
+      },
+      "uiComponent": "sensor",
+      "getable": true,
+      "setable": true,
+      "insights": false,
+      "icon": "/assets/battery-charge-svgrepo-com.svg"
+    },
+    "CleanCount": {
+      "type": "boolean",
+      "getable": true,
+      "setable": true,
+      "title": {
+        "en": "Double run",
+        "fr": "Double passage",
+        "nl": "2 maal schoonmaken"
+      },
+      "insights": false,
+      "icon": "/assets/CleanCount.svg"
+    },
+    "CurrentZone": {
+      "type": "string",
+      "title": {
+        "en": "Current Zone",
+        "fr": "Zone actuelle",
+        "nl": "Huidige kamer"
+      },
+      "uiComponent": "sensor",
+      "getable": true,
+      "setable": true,
+      "insights": false,
+      "icon": "/assets/location-svgrepo-com.svg"
+    },
+    "GotoParkPosition": {
+      "type": "boolean",
+      "getable": true,
+      "setable": true,
+      "title": {
+        "en": "Park",
+        "fr": "Garer",
+        "nl": "Parkeer"
+      },
+      "insights": false,
+      "icon": "/assets/GotoParkPosition.svg"
+    },
+    "MopStatus": {
+      "type": "boolean",
+      "title": {
+        "en": "Mop accessory",
+        "fr": "Serpillière",
+        "nl": "Dweilmodule"
+      },
+      "uiComponent": "sensor",
+      "getable": true,
+      "insights": false,
+      "icon": "/assets/mop-svgrepo-com.svg"
+    },
+    "Operation": {
+      "type": "string",
+      "title": {
+        "en": "Current operation",
+        "fr": "Etat de nettoyage",
+        "nl": "Huidige actie"
+      },
+      "uiComponent": "sensor",
+      "getable": true,
+      "setable": true,
+      "insights": false,
+      "icon": "/assets/clean-svgrepo-com.svg"
+    },
+    "PauseCleaning": {
+      "type": "boolean",
+      "getable": true,
+      "setable": true,
+      "title": {
+        "en": "Pause",
+        "fr": "Pause",
+        "nl": "Pauzeren"
+      },
+      "insights": false,
+      "icon": "/assets/Pause.svg"
+    },
+    "ReturnDock": {
+      "type": "boolean",
+      "getable": true,
+      "setable": true,
+      "title": {
+        "en": "Return to dock",
+        "fr": "Retour à la base",
+        "nl": "Terugkeren naar dock"
+      },
+      "insights": false,
+      "icon": "/assets/ReturnDock.svg"
+    },
+    "ScrubbingType": {
+      "type": "boolean",
+      "getable": true,
+      "setable": true,
+      "title": {
+        "en": "Deep Mopping",
+        "fr": "Serpillère renforcée",
+        "nl": "Intensief dweilen"
+      },
+      "insights": false,
+      "icon": "/assets/mop-svgrepo-com.svg"
+    },
+    "SetParkPosition": {
+      "type": "boolean",
+      "getable": true,
+      "setable": true,
+      "title": {
+        "fr": "Enregistrer parking",
+        "en": "Save parking spot",
+        "nl": "Bewaar parkeerplaats"
+      },
+      "insights": false,
+      "icon": "/assets/SetParkPosition.svg"
+    },
+    "VacuumPower": {
+      "type": "enum",
+      "uiComponent": "picker",
+      "title": {
+        "en": "Suction power",
+        "nl": "Zuigkracht",
+        "fr": "Puissance d'aspiration"
+      },
+      "desc": {
+        "en": "Vacuum Power",
+        "nl": "Zuigkracht van de Deebot",
+        "fr": "Puissance du robot"
+      },
+      "values": [
+        {
+          "id": "1",
+          "title": {
+            "en": "Quiet",
+            "nl": "Zacht",
+            "fr": "Léger"
+          }
+        },
+        {
+          "id": "2",
+          "title": {
+            "en": "Standard",
+            "nl": "Standaard",
+            "fr": "Standard"
+          }
+        },
+        {
+          "id": "3",
+          "title": {
+            "en": "Max",
+            "nl": "Max",
+            "fr": "Max"
+          }
+        },
+        {
+          "id": "4",
+          "title": {
+            "en": "Max+",
+            "nl": "Max+",
+            "fr": "Max+"
+          }
+        }
+      ],
+      "getable": true,
+      "setable": true,
+      "insights": false,
+      "icon": "/assets/mop-svgrepo-com.svg"
+    },
+    "WaterFlowLevel": {
+      "type": "enum",
+      "uiComponent": "picker",
+      "title": {
+        "en": "Waterlevel",
+        "fr": "Consommation d'eau",
+        "nl": "Waterverbruik"
+      },
+      "desc": {
+        "en": "Waterusage while moppong",
+        "fr": "Consommation d'eau lors du nettoyage",
+        "nl": "Water verbruik bij het dweilen"
+      },
+      "values": [
+        {
+          "id": "1",
+          "title": {
+            "en": "Low",
+            "fr": "Peu",
+            "nl": "Laag"
+          }
+        },
+        {
+          "id": "2",
+          "title": {
+            "en": "Medium",
+            "fr": "Moyen",
+            "nl": "Gemiddeld"
+          }
+        },
+        {
+          "id": "3",
+          "title": {
+            "en": "High",
+            "fr": "Beaucoup",
+            "nl": "Hoog"
+          }
+        },
+        {
+          "id": "4",
+          "title": {
+            "en": "Ultra High",
+            "fr": "Tres Beaucoup",
+            "nl": "Extra Hoog"
+          }
+        }
+      ],
+      "getable": true,
+      "setable": true,
+      "insights": false,
+      "icon": "/assets/mop-svgrepo-com.svg"
+    }
+  }
+}

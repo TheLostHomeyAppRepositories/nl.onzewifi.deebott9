@@ -1,0 +1,48 @@
+{
+    "type": "enum",
+    "uiComponent": "picker",
+    "title": {
+        "en": "Waterlevel",
+        "fr": "Consommation d'eau",
+        "nl": "Waterverbruik"
+    },
+    "desc": {
+        "en": "Waterusage while moppong",
+		"fr": "Consommation d'eau lors du nettoyage",
+        "nl": "Water verbruik bij het dweilen"
+    },
+    "values": [{
+            "id": "1",
+            "title": {
+                "en": "Low",
+				"fr": "Peu",
+                "nl": "Laag"
+            }
+        }, {
+            "id": "2",
+            "title": {
+                "en": "Medium",
+				"fr": "Moyen",
+                "nl": "Gemiddeld"
+            }
+        }, {
+            "id": "3",
+            "title": {
+                "en": "High",
+				"fr": "Beaucoup",
+                "nl": "Hoog"
+            }
+        }, {
+            "id": "4",
+            "title": {
+                "en": "Ultra High",
+				"fr": "Tres Beaucoup",
+                "nl": "Extra Hoog"
+            }
+        }
+    ],
+    "getable": true,
+    "setable": true,
+    "insights": false,
+    "icon": "/assets/mop-svgrepo-com.svg"
+}

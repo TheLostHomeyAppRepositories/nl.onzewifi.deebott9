@@ -1,0 +1,15 @@
+[
+  {
+    "id": "username",
+    "type": "text",
+    "label": { "en": "Ecovacs Username", "fr": "Compte Ecovacs" },
+    "value": "John Doe",
+    "hint": { "en": "The name of the user in the Ecovacs app.", "fr": "Le nom de compte dans l'app Ecovacs" }
+  },
+  {
+    "id": "password",
+    "type": "password",
+    "label": { "en": "Password", "fr": "Mot de passe" },
+    "value": "Secret"
+  }
+]

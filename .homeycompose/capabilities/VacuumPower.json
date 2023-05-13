@@ -1,0 +1,52 @@
+{
+    "type": "enum",
+    "uiComponent": "picker",
+    "title": {
+        "en": "Suction power",
+        "nl": "Zuigkracht",
+        "fr": "Puissance d'aspiration"
+    },
+    "desc": {
+        "en": "Vacuum Power",
+        "nl": "Zuigkracht van de Deebot",
+        "fr": "Puissance du robot"
+    },
+    "values": [
+        {
+            "id": "1",
+            "title": {
+                "en": "Quiet",
+                "nl": "Zacht",
+                "fr": "Léger"
+            }
+        },
+        {
+            "id": "2",
+            "title": {
+                "en": "Standard",
+                "nl": "Standaard",
+                "fr": "Standard"
+            }
+        },
+        {
+            "id": "3",
+            "title": {
+                "en": "Max",
+                "nl": "Max",
+                "fr": "Max"
+            }
+        },
+        {
+            "id": "4",
+            "title": {
+                "en": "Max+",
+                "nl": "Max+",
+                "fr": "Max+"
+            }
+        }
+    ],
+    "getable": true,
+    "setable": true,
+    "insights": false,
+    "icon": "/assets/mop-svgrepo-com.svg"
+}

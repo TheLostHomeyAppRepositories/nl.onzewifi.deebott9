@@ -1,0 +1,12 @@
+{
+    "type": "boolean",
+    "getable": true,
+    "setable": true,
+    "title": {
+        "en": "Park",
+        "fr": "Garer",
+        "nl": "Parkeer"
+    },
+    "insights": false,
+    "icon": "/assets/GotoParkPosition.svg"
+}

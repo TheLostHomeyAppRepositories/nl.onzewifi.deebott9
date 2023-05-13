@@ -1,0 +1,107 @@
+{
+  "id": "nl.onzewifi.deebott9",
+  "version": "1.4.8",
+  "compatibility": ">=8.1.1",
+  "sdk": 3,
+  "name": {
+    "en": "< Ecovacs Deebot >"
+  },
+  "brandColor": "#4520DF",
+  "description": {
+    "en": "Connect and control your Ecovacs Deebot",
+    "nl": "Verbind je Ecovacs Deebot 950type (met dweil functie)",
+    "fr": "Connectez votre Ecovacs Deebot type 950 (avec serpillière)"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Sascha (mrbungle64)"
+      },
+      {
+        "name": "Olivier Messiant"
+      }
+    ],
+    "translators": [
+      {
+        "name": "Olivier Messiant"
+      }
+    ]
+  },
+  "category": [
+    "appliances"
+  ],
+  "permissions": [],
+  "platforms": [
+    "local",
+    "cloud"
+  ],
+  "images": {
+    "small": "/assets/images/DeebotT9-Small.png",
+    "large": "/assets/images/DeebotT9-Large.png",
+    "xlarge": "/assets/images/DeebotT9-Extra-Large.png"
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "paypallrvdijk"
+      }
+    }
+  },
+  "author": {
+    "name": "Ricardo van Dijk",
+    "email": "rvdijk@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/cactusss/nl.onzewifi.DeebotT9/issues"
+  },
+  "api": {
+    "getLogs": {
+      "method": "get",
+      "path": "/getlogs"
+    },
+    "deleteLogs": {
+      "method": "get",
+      "path": "/deletelogs"
+    }
+  },
+  "drivers": [
+    {
+      "id": "deebot",
+      "name": {
+        "en": "deebot"
+      },
+      "platforms": [
+				"local",
+				"cloud"
+			],
+			"connectivity": [
+				"cloud"
+			],
+      "class": "vacuum",
+      "capabilities": [
+        "onoff"
+      ],
+      "images": {
+        "small": "/drivers/Deebot/assets/images/Deebot-small.png",
+        "large": "/drivers/Deebot/assets/images/Deebot-large.png"
+      }
+    }
+  ],
+  "tags": {
+    "en": [
+      "Deebot",
+      "mopping",
+      "clean report",
+      "ecovacs multimap"
+    ],
+    "nl": [
+      "Deebot",
+      "dweilen",
+      "multimap",
+      "ecovacs",
+      "afbeelding"
+    ]
+  },
+  "source": "https://github.com/cactusss/nl.onzewifi.DeebotT9",
+  "homeyCommunityTopicId": 75237
+}

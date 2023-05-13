@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "ecovacs-deebot": "^0.9.5",
+    "fixture-stdout": "^0.2.1",
+    "luxon": "^3.3.0",
+    "node-fetch": "^2.6.1"
+  }
+}

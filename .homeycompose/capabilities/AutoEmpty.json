@@ -1,0 +1,12 @@
+{
+    "type": "boolean",
+    "getable": true,
+    "setable": true,
+    "title": {
+        "en": "Enable auto empty",
+        "fr": "Vidange auto",
+        "nl": "Automatisch legen inschakelen"
+    },
+    "insights": false,
+    "icon": "/assets/AutoEmpty.svg"
+}
