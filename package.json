@@ -1,8 +1,7 @@
 {
   "dependencies": {
-    "ecovacs-deebot": "^0.9.5",
-    "fixture-stdout": "^0.2.1",
-    "luxon": "^3.3.0",
-    "node-fetch": "^2.6.1"
+    "ecovacs-deebot": "^0.9.6-alpha.3",
+    "jimp": "^0.22.8",
+    "node-fetch": "^2.6.11"
   }
 }

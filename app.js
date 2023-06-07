@@ -1,13 +1,11 @@
 'use strict';
 
-const Homey = require('homey');
-const Logger = require('./settings/captureLogs.js');
-global.DeviceAPI = null;
+const Homey			= require('homey');
+global.DeviceAPI	= null;
 
 class Deebot extends Homey.App {
 
 	async onInit() {
-		if (!this.logger) this.logger = new Logger({ homey: this.homey, length: 500 });
 
 		global.appdebug		= this.homey.settings.get('appdebug')		|| false;
 		global.libdebug		= this.homey.settings.get('libdebug')		|| false;
@@ -42,7 +40,6 @@ class Deebot extends Homey.App {
 		this.homey.on('unload', () => {
 			this.log(`${Homey.manifest.id} V${Homey.manifest.version} is stopping...`);
 			this.log(`Ecovacs Deebot has stopped`)
-			this.logger.saveLogs();
 		})
 
 		this.homey.settings.on('set', (function (dynamicVariableName) {
@@ -59,13 +56,14 @@ class Deebot extends Homey.App {
 
 	}
 
-	deleteLogs() {
-		return this.logger.deleteLogs();
+	log() {
+		console.log.bind(this, new Date(new Date().getTime() + (new Date().getTimezoneOffset() * 60 * 1000)).toLocaleString('en-US', { day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit', timeZone: this.homey.clock.getTimezone(), hour12: false }).replace(',', '') + " [log] [App]").apply(this, arguments);
 	}
 
-	getLogs() {
-		return this.logger.logArray;
+	error() {
+		console.error.bind(this, new Date(new Date().getTime() + (new Date().getTimezoneOffset() * 60 * 1000)).toLocaleString('en-US', { day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit', timeZone: this.homey.clock.getTimezone(), hour12: false }).replace(',', '') + " [err] [App]").apply(this, arguments);
 	}
+
 }
 
 module.exports = Deebot;

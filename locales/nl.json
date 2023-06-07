@@ -86,5 +86,9 @@
 	"Settings": {
 		"deleteWarning":	"Weet u zeker dat u het logbestand wilt verwijderen?",
 		"deleted":			"Het logbestand is verwijderd."
+	},
+	"mode": {
+		"Vacuum":			"Gezogen",
+		"Mop":				"Gedweild"
 	}
 }

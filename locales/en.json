@@ -86,5 +86,9 @@
 	"settings":			{
 		"deleteWarning":	"Are you sure you want to delete the logfile?",
 		"deleted":			"The logfile was deleted."
+	},
+	"mode": {
+		"Vacuum":			"Vacuumed",
+		"Mop":				"Mopped"
 	}
 }
